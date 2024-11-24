@@ -1,0 +1,47 @@
+{% set version = "3.1.2" %}
+
+package:
+  name: opengis
+  version: {{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/36/84/cab68fa103330a558a057334020b8876921f470ff7a392b85b68ffebb9f0/opengis-3.1.2.tar.gz
+  sha256: bcddae5f4b0cb1fa69272a9119ae773f9b419438d5b55ac5b7b74ba717d32a36
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python >=3.9
+    - pip
+  run:
+    - python >=3.9
+    - conda-forge::numpy
+    - conda-forge::gdal
+    - conda-forge::geopandas
+    - conda-forge::rasterio
+    - conda-forge::shapely
+    - conda-forge::rasterstats
+
+test:
+  imports:
+    - opengis
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  summary: An open source GIS tool.
+  description: |
+    This is an open source GIS tool.
+  dev_url: https://github.com/caaszj/opengis
+  license: MIT
+  license_file: LICENSE.txt
+
+extra:
+  channels:
+    - conda-forge
