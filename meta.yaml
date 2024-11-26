@@ -1,12 +1,12 @@
-{% set version = "3.1.2" %}
+{% set version = "3.1.4" %}
 
 package:
   name: opengis
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/36/84/cab68fa103330a558a057334020b8876921f470ff7a392b85b68ffebb9f0/opengis-3.1.2.tar.gz
-  sha256: bcddae5f4b0cb1fa69272a9119ae773f9b419438d5b55ac5b7b74ba717d32a36
+  url: https://files.pythonhosted.org/packages/d7/d4/d5e085a9b7bb3bcf76317a1af04aea2de4a9cfb90573248478fdf67eadc7/opengis-3.1.4.tar.gz
+  sha256: e487ca39283580f436d5b144b190784ce8b284065c47f71d282e7c278484591e
 
 build:
   noarch: python
