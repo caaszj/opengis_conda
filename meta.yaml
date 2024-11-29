@@ -1,12 +1,12 @@
-{% set version = "3.1.4" %}
+{% set version = "3.1.5" %}
 
 package:
   name: opengis
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/d7/d4/d5e085a9b7bb3bcf76317a1af04aea2de4a9cfb90573248478fdf67eadc7/opengis-3.1.4.tar.gz
-  sha256: e487ca39283580f436d5b144b190784ce8b284065c47f71d282e7c278484591e
+  url: https://files.pythonhosted.org/packages/28/ee/cd2866c2bac68f047fa1c2513bef14a85f01e8401e56e83cde706e2d83f1/opengis-3.1.5.tar.gz
+  sha256: ee539b24675d49dfdf5d599d7217c44f6888f33381be3cdacc6db57c07c0c787
 
 build:
   noarch: python
@@ -17,14 +17,15 @@ requirements:
   host:
     - python >=3.9
     - pip
+    - hatchling
   run:
     - python >=3.9
-    - conda-forge::numpy
-    - conda-forge::gdal
-    - conda-forge::geopandas
-    - conda-forge::rasterio
-    - conda-forge::shapely
-    - conda-forge::rasterstats
+    - numpy
+    - gdal
+    - geopandas
+    - rasterio
+    - shapely
+    - rasterstats
 
 test:
   imports:
