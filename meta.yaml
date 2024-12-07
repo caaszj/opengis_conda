@@ -1,12 +1,12 @@
-{% set version = "3.1.5" %}
+{% set version = "3.1.6" %}
 
 package:
   name: opengis
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/28/ee/cd2866c2bac68f047fa1c2513bef14a85f01e8401e56e83cde706e2d83f1/opengis-3.1.5.tar.gz
-  sha256: ee539b24675d49dfdf5d599d7217c44f6888f33381be3cdacc6db57c07c0c787
+  url: https://files.pythonhosted.org/packages/96/9c/523d4c6de273e5b5a970870be98e2b0d91ae86314ad9d0e86d80cc4081bf/opengis-3.1.6.tar.gz
+  sha256: da96f9755d73a2ee8efde24245424efb3b01a195f3ede06bb8dc8cce448c3d41
 
 build:
   noarch: python
@@ -26,6 +26,7 @@ requirements:
     - rasterio
     - shapely
     - rasterstats
+    - tqdm
 
 test:
   imports:
